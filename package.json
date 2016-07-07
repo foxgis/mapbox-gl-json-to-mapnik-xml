@@ -1,0 +1,14 @@
+{
+  "name": "mapbox-gl-json-to-mapnik-xml",
+  "version": "0.1.0",
+  "description": "Convert mapbox gl json to mapnik xml",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "mapbox-gl-function": "^1.2.1",
+    "xmlbuilder": "^8.2.2"
+  }
+}
