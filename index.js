@@ -96,7 +96,7 @@ function gl2xml(globj, callback) {
     }
   })
   var xml = xmlbuilder.create(mMap)
-  callback(null, xml)
+  callback(null, xml.end())
 }
 
 exports.gl2xml = gl2xml
