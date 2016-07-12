@@ -83,7 +83,7 @@ function gl2xml(globj, callback) {
   var mlayers = []
   mMap = Map(srs_mector, glayers)
   if (fontUri) {
-    mMap.Map['@font-directory'] = 'url(' + fontUri + ')'
+    mMap.Map['@font-directory'] =fontUri.replace(/\\/g,'/')
   }
   mMap.Map.Layer = Layer(glayers)
   mMap.Map.Style = []
