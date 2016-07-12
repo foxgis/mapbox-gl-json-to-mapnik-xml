@@ -99,4 +99,4 @@ function gl2xml(globj, callback) {
   callback(null, xml.end())
 }
 
-exports.gl2xml = gl2xml
+module.exports = gl2xml
