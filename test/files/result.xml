@@ -476,7 +476,7 @@
         </Rule>
         <Rule>
             <filter>( [class] = "AE" ) or ( [class] = "AF" )</filter>
-            <PolygonSymbolizer file="sprites/foxgis/circle-11.svg"/>
+            <PolygonSymbolizer file="sprites/foxgis/Hk6NFtw8/circle-11.svg"/>
         </Rule>
     </Style>
     <Style name="shi_label">
@@ -493,7 +493,7 @@
         </Rule>
         <Rule>
             <filter>( [class] = "AD" ) or ( [class] = "AC" )</filter>
-            <PolygonSymbolizer file="sprites/foxgis/circle-11.svg"/>
+            <PolygonSymbolizer file="sprites/foxgis/Hk6NFtw8/circle-11.svg"/>
         </Rule>
     </Style>
     <Style name="shenghui_label_icon">
@@ -510,7 +510,7 @@
         </Rule>
         <Rule>
             <filter>( [class] = "AB" )</filter>
-            <PolygonSymbolizer file="sprites/foxgis/circle-11.svg"/>
+            <PolygonSymbolizer file="sprites/foxgis/Hk6NFtw8/circle-11.svg"/>
         </Rule>
     </Style>
     <Style name="capital_label">
@@ -527,7 +527,7 @@
         </Rule>
         <Rule>
             <filter>( [class] = "AB" ) and ( [capname] = "北京" )</filter>
-            <PolygonSymbolizer file="sprites/foxgis/star-15.svg"/>
+            <PolygonSymbolizer file="sprites/foxgis/Hk6NFtw8/star-15.svg"/>
         </Rule>
     </Style>
     <Style name="tianditu_live">
@@ -638,7 +638,7 @@
         </Rule>
         <Rule>
             <filter>( [class] = "AK" )</filter>
-            <PolygonSymbolizer file="sprites/foxgis/circle-stroked-11.svg"/>
+            <PolygonSymbolizer file="sprites/foxgis/Hk6NFtw8/circle-stroked-11.svg"/>
         </Rule>
     </Style>
     <Style name="village_label">
@@ -655,7 +655,7 @@
         </Rule>
         <Rule>
             <filter>( [class] = "BA" ) or ( [class] = "BB" ) or ( [class] = "BC" )</filter>
-            <PolygonSymbolizer file="sprites/foxgis/circle-stroked-11.svg"/>
+            <PolygonSymbolizer file="sprites/foxgis/Hk6NFtw8/circle-stroked-11.svg"/>
         </Rule>
     </Style>
     <Style name="town_label">
@@ -685,7 +685,7 @@
         </Rule>
         <Rule>
             <filter>( [class] = "AF" ) or ( [class] = "AE" )</filter>
-            <PolygonSymbolizer file="sprites/foxgis/circle-stroked-11.svg"/>
+            <PolygonSymbolizer file="sprites/foxgis/Hk6NFtw8/circle-stroked-11.svg"/>
         </Rule>
     </Style>
     <Layer srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
