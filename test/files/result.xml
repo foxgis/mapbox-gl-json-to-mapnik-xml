@@ -8,7 +8,7 @@
         <parameter name="minzoom">0</parameter>
         <parameter name="maxzoom">20</parameter>
         <parameter name="source">
-            <![CDATA[http://218.244.250.70:8090/api/v1/tilesets/foxgis/{z}/{x}/{y}.vector.pbf]]></parameter>
+            <![CDATA[http://218.244.250.70:8090/api/v1/tilesets/foxgis/admin2/{z}/{x}/{y}.vector.pbf]]></parameter>
     </Parameters>
     <Style name="asia_fill">
         <Rule>
@@ -36,7 +36,7 @@
         </Rule>
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(225,214,211)" stroke-width="5"/>
+            <LineSymbolizer stroke="rgb(225,214,211)" stroke-width="6.5"/>
             <MinScaleDenominator>50000000</MinScaleDenominator>
             <MaxScaleDenominator>100000000</MaxScaleDenominator>
         </Rule>
@@ -48,7 +48,7 @@
         </Rule>
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(225,214,211)" stroke-width="8"/>
+            <LineSymbolizer stroke="rgb(225,214,211)" stroke-width="9"/>
             <MinScaleDenominator>12500000</MinScaleDenominator>
             <MaxScaleDenominator>25000000</MaxScaleDenominator>
         </Rule>
@@ -78,7 +78,7 @@
         </Rule>
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(150,150,150)" stroke-width="1"/>
+            <LineSymbolizer stroke="rgb(150,150,150)" stroke-width="1.5"/>
             <MinScaleDenominator>50000000</MinScaleDenominator>
             <MaxScaleDenominator>100000000</MaxScaleDenominator>
         </Rule>
@@ -90,7 +90,7 @@
         </Rule>
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(150,150,150)" stroke-width="2"/>
+            <LineSymbolizer stroke="rgb(150,150,150)" stroke-width="2.5"/>
             <MinScaleDenominator>12500000</MinScaleDenominator>
             <MaxScaleDenominator>25000000</MaxScaleDenominator>
         </Rule>
@@ -174,7 +174,7 @@
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="4" stroke-linecap="round"/>
+            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="4.5" stroke-linecap="round"/>
             <MinScaleDenominator>750000</MinScaleDenominator>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
         </Rule>
@@ -186,37 +186,37 @@
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="5" stroke-linecap="round"/>
+            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="5.142857142857143" stroke-linecap="round"/>
             <MinScaleDenominator>200000</MinScaleDenominator>
             <MaxScaleDenominator>400000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="5" stroke-linecap="round"/>
+            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="5.285714285714286" stroke-linecap="round"/>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="5" stroke-linecap="round"/>
+            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="5.428571428571428" stroke-linecap="round"/>
             <MinScaleDenominator>50000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="5" stroke-linecap="round"/>
+            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="5.571428571428571" stroke-linecap="round"/>
             <MinScaleDenominator>25000</MinScaleDenominator>
             <MaxScaleDenominator>50000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="5" stroke-linecap="round"/>
+            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="5.7142857142857135" stroke-linecap="round"/>
             <MinScaleDenominator>12500</MinScaleDenominator>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="5" stroke-linecap="round"/>
+            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="5.857142857142857" stroke-linecap="round"/>
             <MinScaleDenominator>5000</MinScaleDenominator>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
         </Rule>
@@ -246,13 +246,13 @@
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="1" stroke-linecap="round"/>
+            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="1.6666666666666667" stroke-linecap="round"/>
             <MinScaleDenominator>6500000</MinScaleDenominator>
             <MaxScaleDenominator>12500000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="1" stroke-linecap="round"/>
+            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="2.3333333333333335" stroke-linecap="round"/>
             <MinScaleDenominator>3000000</MinScaleDenominator>
             <MaxScaleDenominator>6500000</MaxScaleDenominator>
         </Rule>
@@ -264,7 +264,7 @@
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="3" stroke-linecap="round"/>
+            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="3.5" stroke-linecap="round"/>
             <MinScaleDenominator>750000</MinScaleDenominator>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
         </Rule>
@@ -276,37 +276,37 @@
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="4" stroke-linecap="round"/>
+            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="4.142857142857143" stroke-linecap="round"/>
             <MinScaleDenominator>200000</MinScaleDenominator>
             <MaxScaleDenominator>400000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="4" stroke-linecap="round"/>
+            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="4.285714285714286" stroke-linecap="round"/>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="4" stroke-linecap="round"/>
+            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="4.428571428571429" stroke-linecap="round"/>
             <MinScaleDenominator>50000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="4" stroke-linecap="round"/>
+            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="4.571428571428571" stroke-linecap="round"/>
             <MinScaleDenominator>25000</MinScaleDenominator>
             <MaxScaleDenominator>50000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="4" stroke-linecap="round"/>
+            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="4.714285714285714" stroke-linecap="round"/>
             <MinScaleDenominator>12500</MinScaleDenominator>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="4" stroke-linecap="round"/>
+            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="4.857142857142858" stroke-linecap="round"/>
             <MinScaleDenominator>5000</MinScaleDenominator>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
         </Rule>
