@@ -1,5 +1,6 @@
+<?xml version="1.0"?>
 <Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-     background-color="#87c2e4" font-directory="url(fontstack\{fontstack})">
+     background-color="#87c2e4" font-directory="fonts/foxgis">
     <Parameters>
         <parameter name="bounds">-180,-85.0511,180,85.0511</parameter>
         <parameter name="center">0,0,0</parameter>
@@ -7,7 +8,7 @@
         <parameter name="minzoom">0</parameter>
         <parameter name="maxzoom">20</parameter>
         <parameter name="source">
-            <![CDATA[http://192.9.105.123:3020/ngcc/v1/admin_map/{z}/{x}/{y}.vector.pbf]]></parameter>
+            <![CDATA[http://218.244.250.70:8090/api/v1/tilesets/foxgis/{z}/{x}/{y}.vector.pbf]]></parameter>
     </Parameters>
     <Style name="asia_fill">
         <Rule>
@@ -18,103 +19,105 @@
     <Style name="asia_line">
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(75,138,232)" stroke-opacity="0.5" stroke-width="0.6" stroke-linejoin="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(75,138,232)" stroke-opacity="0.5" stroke-width="0.6"
+                            stroke-linejoin="round"/>
         </Rule>
     </Style>
     <Style name="china_bou_case">
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(225,214,211)"/>
+            <LineSymbolizer spacing="250" stroke="rgb(225,214,211)"/>
             <MinScaleDenominator>200000000</MinScaleDenominator>
         </Rule>
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(225,214,211)" stroke-width="5"/>
+            <LineSymbolizer spacing="250" stroke="rgb(225,214,211)" stroke-width="5"/>
             <MinScaleDenominator>100000000</MinScaleDenominator>
             <MaxScaleDenominator>200000000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(225,214,211)" stroke-width="6.5"/>
+            <LineSymbolizer spacing="250" stroke="rgb(225,214,211)" stroke-width="5"/>
             <MinScaleDenominator>50000000</MinScaleDenominator>
             <MaxScaleDenominator>100000000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(225,214,211)" stroke-width="8"/>
+            <LineSymbolizer spacing="250" stroke="rgb(225,214,211)" stroke-width="8"/>
             <MinScaleDenominator>25000000</MinScaleDenominator>
             <MaxScaleDenominator>50000000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(225,214,211)" stroke-width="9"/>
+            <LineSymbolizer spacing="250" stroke="rgb(225,214,211)" stroke-width="8"/>
             <MinScaleDenominator>12500000</MinScaleDenominator>
             <MaxScaleDenominator>25000000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(225,214,211)" stroke-width="10"/>
+            <LineSymbolizer spacing="250" stroke="rgb(225,214,211)" stroke-width="10"/>
             <MinScaleDenominator>6500000</MinScaleDenominator>
             <MaxScaleDenominator>12500000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(225,214,211)" stroke-width="10"/>
+            <LineSymbolizer spacing="250" stroke="rgb(225,214,211)" stroke-width="10"/>
             <MaxScaleDenominator>6500000</MaxScaleDenominator>
         </Rule>
     </Style>
     <Style name="china_bou">
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(150,150,150)"/>
+            <LineSymbolizer spacing="250" stroke="rgb(150,150,150)"/>
             <MinScaleDenominator>200000000</MinScaleDenominator>
         </Rule>
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(150,150,150)" stroke-width="1"/>
+            <LineSymbolizer spacing="250" stroke="rgb(150,150,150)" stroke-width="1"/>
             <MinScaleDenominator>100000000</MinScaleDenominator>
             <MaxScaleDenominator>200000000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(150,150,150)" stroke-width="1.5"/>
+            <LineSymbolizer spacing="250" stroke="rgb(150,150,150)" stroke-width="1"/>
             <MinScaleDenominator>50000000</MinScaleDenominator>
             <MaxScaleDenominator>100000000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(150,150,150)" stroke-width="2"/>
+            <LineSymbolizer spacing="250" stroke="rgb(150,150,150)" stroke-width="2"/>
             <MinScaleDenominator>25000000</MinScaleDenominator>
             <MaxScaleDenominator>50000000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(150,150,150)" stroke-width="2.5"/>
+            <LineSymbolizer spacing="250" stroke="rgb(150,150,150)" stroke-width="2"/>
             <MinScaleDenominator>12500000</MinScaleDenominator>
             <MaxScaleDenominator>25000000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(150,150,150)" stroke-width="3"/>
+            <LineSymbolizer spacing="250" stroke="rgb(150,150,150)" stroke-width="3"/>
             <MinScaleDenominator>6500000</MinScaleDenominator>
             <MaxScaleDenominator>12500000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(150,150,150)" stroke-width="3"/>
+            <LineSymbolizer spacing="250" stroke="rgb(150,150,150)" stroke-width="3"/>
             <MaxScaleDenominator>6500000</MaxScaleDenominator>
         </Rule>
     </Style>
     <Style name="sheng_line">
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(150,150,150)" stroke-width="1" stroke-dasharray="1,3" stroke-linejoin="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(150,150,150)" stroke-width="1" stroke-dasharray="1,3"
+                            stroke-linejoin="round"/>
         </Rule>
     </Style>
     <Style name="sheng_line2">
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(150,150,150)" stroke-width="1" stroke-dasharray="5,8"/>
+            <LineSymbolizer spacing="250" stroke="rgb(150,150,150)" stroke-width="1" stroke-dasharray="5,8"/>
         </Rule>
     </Style>
     <Style name="jumindi_fill">
@@ -126,7 +129,7 @@
     <Style name="heliu_line">
         <Rule>
             <filter/>
-            <LineSymbolizer stroke-width="1" stroke="#87c2e4"/>
+            <LineSymbolizer spacing="250" stroke-width="1" stroke="#87c2e4"/>
         </Rule>
     </Style>
     <Style name="heliu_fill">
@@ -138,214 +141,214 @@
     <Style name="tielu_case">
         <Rule>
             <filter>( [gb] = 410101 ) or ( [gb] = 410102 ) or ( [gb] = 410103 ) or ( [gb] = 410200 )</filter>
-            <LineSymbolizer stroke-width="2.4" stroke="#949494"/>
+            <LineSymbolizer spacing="250" stroke-width="2.4" stroke="#949494"/>
         </Rule>
     </Style>
     <Style name="tielu">
         <Rule>
             <filter>( [gb] = 410101 ) or ( [gb] = 410102 ) or ( [gb] = 410103 ) or ( [gb] = 410200 )</filter>
-            <LineSymbolizer stroke-width="1.2" stroke="#fff" stroke-dasharray="10,10"/>
+            <LineSymbolizer spacing="250" stroke-width="1.2" stroke="#fff" stroke-dasharray="10,10"/>
         </Rule>
     </Style>
     <Style name="daolu_case">
         <Rule>
             <filter>( [gb] != 420101 ) and ( [gb] != 420102 ) and ( [gb] != 420201 ) and ( [rteg] != "高速" )</filter>
-            <LineSymbolizer stroke="#ca8" stroke-width="2.4" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="#ca8" stroke-width="2.4" stroke-linecap="round"/>
         </Rule>
     </Style>
     <Style name="daolu_in">
         <Rule>
             <filter>( [gb] != 420101 ) and ( [gb] != 420102 ) and ( [gb] != 420201 ) and ( [rteg] != "高速" )</filter>
-            <LineSymbolizer stroke="rgb(249,226,169)" stroke-width="1.6" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(249,226,169)" stroke-width="1.6" stroke-linecap="round"/>
         </Rule>
     </Style>
     <Style name="gaosu_case">
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(246,130,65)" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(246,130,65)" stroke-linecap="round"/>
             <MinScaleDenominator>3000000</MinScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="4" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(246,130,65)" stroke-width="4" stroke-linecap="round"/>
             <MinScaleDenominator>1500000</MinScaleDenominator>
             <MaxScaleDenominator>3000000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="4.5" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(246,130,65)" stroke-width="4" stroke-linecap="round"/>
             <MinScaleDenominator>750000</MinScaleDenominator>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="5" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(246,130,65)" stroke-width="5" stroke-linecap="round"/>
             <MinScaleDenominator>400000</MinScaleDenominator>
             <MaxScaleDenominator>750000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="5.142857142857143" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(246,130,65)" stroke-width="5" stroke-linecap="round"/>
             <MinScaleDenominator>200000</MinScaleDenominator>
             <MaxScaleDenominator>400000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="5.285714285714286" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(246,130,65)" stroke-width="5" stroke-linecap="round"/>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="5.428571428571428" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(246,130,65)" stroke-width="5" stroke-linecap="round"/>
             <MinScaleDenominator>50000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="5.571428571428571" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(246,130,65)" stroke-width="5" stroke-linecap="round"/>
             <MinScaleDenominator>25000</MinScaleDenominator>
             <MaxScaleDenominator>50000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="5.7142857142857135" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(246,130,65)" stroke-width="5" stroke-linecap="round"/>
             <MinScaleDenominator>12500</MinScaleDenominator>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="5.857142857142857" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(246,130,65)" stroke-width="5" stroke-linecap="round"/>
             <MinScaleDenominator>5000</MinScaleDenominator>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="6" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(246,130,65)" stroke-width="6" stroke-linecap="round"/>
             <MinScaleDenominator>2500</MinScaleDenominator>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="6" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(246,130,65)" stroke-width="6" stroke-linecap="round"/>
             <MaxScaleDenominator>2500</MaxScaleDenominator>
         </Rule>
     </Style>
     <Style name="gaosu_in">
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(243,157,109)" stroke-linecap="round"/>
             <MinScaleDenominator>25000000</MinScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="1" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(243,157,109)" stroke-width="1" stroke-linecap="round"/>
             <MinScaleDenominator>12500000</MinScaleDenominator>
             <MaxScaleDenominator>25000000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="1.6666666666666667" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(243,157,109)" stroke-width="1" stroke-linecap="round"/>
             <MinScaleDenominator>6500000</MinScaleDenominator>
             <MaxScaleDenominator>12500000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="2.3333333333333335" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(243,157,109)" stroke-width="1" stroke-linecap="round"/>
             <MinScaleDenominator>3000000</MinScaleDenominator>
             <MaxScaleDenominator>6500000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="3" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(243,157,109)" stroke-width="3" stroke-linecap="round"/>
             <MinScaleDenominator>1500000</MinScaleDenominator>
             <MaxScaleDenominator>3000000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="3.5" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(243,157,109)" stroke-width="3" stroke-linecap="round"/>
             <MinScaleDenominator>750000</MinScaleDenominator>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="4" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(243,157,109)" stroke-width="4" stroke-linecap="round"/>
             <MinScaleDenominator>400000</MinScaleDenominator>
             <MaxScaleDenominator>750000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="4.142857142857143" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(243,157,109)" stroke-width="4" stroke-linecap="round"/>
             <MinScaleDenominator>200000</MinScaleDenominator>
             <MaxScaleDenominator>400000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="4.285714285714286" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(243,157,109)" stroke-width="4" stroke-linecap="round"/>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="4.428571428571429" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(243,157,109)" stroke-width="4" stroke-linecap="round"/>
             <MinScaleDenominator>50000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="4.571428571428571" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(243,157,109)" stroke-width="4" stroke-linecap="round"/>
             <MinScaleDenominator>25000</MinScaleDenominator>
             <MaxScaleDenominator>50000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="4.714285714285714" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(243,157,109)" stroke-width="4" stroke-linecap="round"/>
             <MinScaleDenominator>12500</MinScaleDenominator>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="4.857142857142858" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(243,157,109)" stroke-width="4" stroke-linecap="round"/>
             <MinScaleDenominator>5000</MinScaleDenominator>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="5" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(243,157,109)" stroke-width="5" stroke-linecap="round"/>
             <MinScaleDenominator>2500</MinScaleDenominator>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="5" stroke-linecap="round"/>
+            <LineSymbolizer spacing="250" stroke="rgb(243,157,109)" stroke-width="5" stroke-linecap="round"/>
             <MaxScaleDenominator>2500</MaxScaleDenominator>
         </Rule>
     </Style>
     <Style name="asia_label">
         <Rule>
             <filter>( [name] = "亚洲" )</filter>
-            <TextSymbolizer fill="#93471D" face-name="Arial Unicode MS Regular" allow-overlap="false">
+            <TextSymbolizer max-char-angle-delta="45" fill="#93471D" face-name="SimHei Regular" allow-overlap="true">
                 <![CDATA[[name]]]></TextSymbolizer>
             <MinScaleDenominator>500000000</MinScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [name] = "亚洲" )</filter>
-            <TextSymbolizer fill="#93471D" face-name="Arial Unicode MS Regular" allow-overlap="true" size="14">
-                <![CDATA[[name]]]></TextSymbolizer>
+            <TextSymbolizer max-char-angle-delta="45" fill="#93471D" face-name="SimHei Regular" allow-overlap="true"
+                            size="14"><![CDATA[[name]]]></TextSymbolizer>
             <MinScaleDenominator>200000000</MinScaleDenominator>
             <MaxScaleDenominator>500000000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [name] = "亚洲" )</filter>
-            <TextSymbolizer fill="#93471D" face-name="Arial Unicode MS Regular" allow-overlap="true" size="25">
-                <![CDATA[[name]]]></TextSymbolizer>
+            <TextSymbolizer max-char-angle-delta="45" fill="#93471D" face-name="SimHei Regular" allow-overlap="true"
+                            size="25"><![CDATA[[name]]]></TextSymbolizer>
             <MinScaleDenominator>100000000</MinScaleDenominator>
             <MaxScaleDenominator>200000000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [name] = "亚洲" )</filter>
-            <TextSymbolizer fill="#93471D" face-name="Arial Unicode MS Regular" allow-overlap="true" size="25">
-                <![CDATA[[name]]]></TextSymbolizer>
+            <TextSymbolizer max-char-angle-delta="45" fill="#93471D" face-name="SimHei Regular" allow-overlap="true"
+                            size="25"><![CDATA[[name]]]></TextSymbolizer>
             <MaxScaleDenominator>100000000</MaxScaleDenominator>
         </Rule>
         <Rule>
@@ -356,40 +359,41 @@
     <Style name="china_label">
         <Rule>
             <filter>( [name] = "中国" )</filter>
-            <TextSymbolizer fill="#FF0000" face-name="Arial Unicode MS Regular"><![CDATA['中华人民共和国']]></TextSymbolizer>
+            <TextSymbolizer max-char-angle-delta="45" fill="#FF0000" face-name="SimHei Regular">
+                <![CDATA['中华人民共和国']]></TextSymbolizer>
             <MinScaleDenominator>500000000</MinScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [name] = "中国" )</filter>
-            <TextSymbolizer fill="#FF0000" face-name="Arial Unicode MS Regular" size="10">
+            <TextSymbolizer max-char-angle-delta="45" fill="#FF0000" face-name="SimHei Regular" size="10">
                 <![CDATA['中华人民共和国']]></TextSymbolizer>
             <MinScaleDenominator>200000000</MinScaleDenominator>
             <MaxScaleDenominator>500000000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [name] = "中国" )</filter>
-            <TextSymbolizer fill="#FF0000" face-name="Arial Unicode MS Regular" size="12">
+            <TextSymbolizer max-char-angle-delta="45" fill="#FF0000" face-name="SimHei Regular" size="12">
                 <![CDATA['中华人民共和国']]></TextSymbolizer>
             <MinScaleDenominator>100000000</MinScaleDenominator>
             <MaxScaleDenominator>200000000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [name] = "中国" )</filter>
-            <TextSymbolizer fill="#FF0000" face-name="Arial Unicode MS Regular" size="16">
+            <TextSymbolizer max-char-angle-delta="45" fill="#FF0000" face-name="SimHei Regular" size="16">
                 <![CDATA['中华人民共和国']]></TextSymbolizer>
             <MinScaleDenominator>50000000</MinScaleDenominator>
             <MaxScaleDenominator>100000000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [name] = "中国" )</filter>
-            <TextSymbolizer fill="#FF0000" face-name="Arial Unicode MS Regular" size="25">
+            <TextSymbolizer max-char-angle-delta="45" fill="#FF0000" face-name="SimHei Regular" size="25">
                 <![CDATA['中华人民共和国']]></TextSymbolizer>
             <MinScaleDenominator>25000000</MinScaleDenominator>
             <MaxScaleDenominator>50000000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter>( [name] = "中国" )</filter>
-            <TextSymbolizer fill="#FF0000" face-name="Arial Unicode MS Regular" size="25">
+            <TextSymbolizer max-char-angle-delta="45" fill="#FF0000" face-name="SimHei Regular" size="25">
                 <![CDATA['中华人民共和国']]></TextSymbolizer>
             <MaxScaleDenominator>25000000</MaxScaleDenominator>
         </Rule>
@@ -401,8 +405,8 @@
     <Style name="sheng_label">
         <Rule>
             <filter/>
-            <TextSymbolizer fill="rgb(250,0,0)" halo-fill="rgb(255,255,255)" halo-radius="1.5" size="12"
-                            face-name="Arial Unicode MS Regular" dx="1" dy="0" wrap-width="128">
+            <TextSymbolizer max-char-angle-delta="45" fill="rgb(250,0,0)" halo-fill="rgb(255,255,255)" halo-radius="1.5"
+                            size="12" face-name="SimHei Regular" dx="1" dy="0" wrap-width="128">
                 <![CDATA[[name]]]></TextSymbolizer>
         </Rule>
         <Rule>
@@ -413,8 +417,8 @@
     <Style name="heliu_line_label">
         <Rule>
             <filter/>
-            <TextSymbolizer fill="rgb(12,127,241)" face-name="Arial Unicode MS Regular" size="12" allow-overlap="false"
-                            character-spacing="16"><![CDATA[[name]]]></TextSymbolizer>
+            <TextSymbolizer max-char-angle-delta="45" fill="rgb(12,127,241)" face-name="SimHei Regular" size="12"
+                            allow-overlap="false" character-spacing="16"><![CDATA[[name]]]></TextSymbolizer>
         </Rule>
         <Rule>
             <filter/>
@@ -424,7 +428,7 @@
     <Style name="heliu_point_label">
         <Rule>
             <filter/>
-            <TextSymbolizer fill="rgb(12,127,241)" face-name="Arial Unicode MS Regular" size="14">
+            <TextSymbolizer max-char-angle-delta="45" fill="rgb(12,127,241)" face-name="SimHei Regular" size="14">
                 <![CDATA[[name]]]></TextSymbolizer>
         </Rule>
         <Rule>
@@ -435,8 +439,8 @@
     <Style name="cun_label">
         <Rule>
             <filter>( [class] = "AK" )</filter>
-            <TextSymbolizer fill="#0e0d0d" halo-fill="rgb(255,255,255)" halo-radius="1.5" line-spacing="19.2" size="10"
-                            max-char-angle-delta="38" face-name="Arial Unicode MS Regular" dx="0.7" dy="0.7"
+            <TextSymbolizer max-char-angle-delta="38" fill="#0e0d0d" halo-fill="rgb(255,255,255)" halo-radius="1.5"
+                            line-spacing="19.2" size="10" face-name="SimHei Regular" dx="0" dy="0.7"
                             vertical-alignment="top" character-spacing="0.32" wrap-width="112" allow-overlap="false">
                 <![CDATA[[name]]]></TextSymbolizer>
         </Rule>
@@ -448,8 +452,8 @@
     <Style name="xiangzhen_label">
         <Rule>
             <filter>( [class] = "AH" ) or ( [class] = "AI" ) or ( [class] = "AJ" )</filter>
-            <TextSymbolizer fill="rgb(40,40,40)" halo-fill="rgb(255,255,255)" halo-radius="1.5" line-spacing="19.2"
-                            size="11" max-char-angle-delta="38" face-name="Arial Unicode MS Regular" dx="0.7" dy="0.7"
+            <TextSymbolizer max-char-angle-delta="38" fill="rgb(40,40,40)" halo-fill="rgb(255,255,255)"
+                            halo-radius="1.5" line-spacing="19.2" size="11" face-name="SimHei Regular" dx="0" dy="0.7"
                             vertical-alignment="top" character-spacing="0.32" wrap-width="112">
                 <![CDATA[[name]]]></TextSymbolizer>
         </Rule>
@@ -461,52 +465,69 @@
     <Style name="xian_label">
         <Rule>
             <filter>( [class] = "AE" ) or ( [class] = "AF" )</filter>
-            <TextSymbolizer fill="rgb(60,60,60)" halo-fill="rgb(255,255,255)" halo-radius="1.5" line-spacing="19.2"
-                            size="13" max-char-angle-delta="38" face-name="Arial Unicode MS Regular" dx="0.7" dy="0.7"
+            <TextSymbolizer max-char-angle-delta="38" fill="rgb(60,60,60)" halo-fill="rgb(255,255,255)"
+                            halo-radius="1.5" line-spacing="19.2" size="13" face-name="SimHei Regular" dx="0" dy="0.7"
                             vertical-alignment="top" character-spacing="0.32" wrap-width="112">
                 <![CDATA[[name]]]></TextSymbolizer>
         </Rule>
         <Rule>
             <filter>( [class] = "AE" ) or ( [class] = "AF" )</filter>
-            <MarkersSymbolizer fill="rgb(0,10,10)" transform=" scale(6)" placement="point"/>
+            <MarkersSymbolizer fill="rgb(0,10,10)" placement="point"/>
+        </Rule>
+        <Rule>
+            <filter>( [class] = "AE" ) or ( [class] = "AF" )</filter>
+            <PolygonSymbolizer file="sprites/foxgis/circle-11.svg"/>
         </Rule>
     </Style>
     <Style name="shi_label">
         <Rule>
             <filter>( [class] = "AD" ) or ( [class] = "AC" )</filter>
-            <TextSymbolizer fill="#fe001f" halo-fill="rgb(255,255,255)" halo-radius="1.5" line-spacing="19.2" size="13"
-                            max-char-angle-delta="38" face-name="Arial Unicode MS Regular" dx="0.7" dy="0.7"
+            <TextSymbolizer max-char-angle-delta="38" fill="#fe001f" halo-fill="rgb(255,255,255)" halo-radius="1.5"
+                            line-spacing="19.2" size="13" face-name="SimHei Regular" dx="0" dy="0.7"
                             vertical-alignment="top" character-spacing="0.32" wrap-width="128">
                 <![CDATA[[name]]]></TextSymbolizer>
         </Rule>
         <Rule>
             <filter>( [class] = "AD" ) or ( [class] = "AC" )</filter>
-            <MarkersSymbolizer fill="#2f2f2f" transform=" scale(8)" placement="point"/>
+            <MarkersSymbolizer fill="#2f2f2f" placement="point"/>
+        </Rule>
+        <Rule>
+            <filter>( [class] = "AD" ) or ( [class] = "AC" )</filter>
+            <PolygonSymbolizer file="sprites/foxgis/circle-11.svg"/>
         </Rule>
     </Style>
     <Style name="shenghui_label_icon">
         <Rule>
             <filter>( [class] = "AB" )</filter>
-            <TextSymbolizer fill="rgb(20,20,20)" halo-fill="rgb(255,255,255)" halo-radius="1.5" size="15"
-                            face-name="Arial Unicode MS Regular" dx="0.7" dy="0.7" vertical-alignment="top"
-                            character-spacing="0.32" wrap-width="128"><![CDATA[[capname]]]></TextSymbolizer>
+            <TextSymbolizer max-char-angle-delta="45" fill="rgb(20,20,20)" halo-fill="rgb(255,255,255)"
+                            halo-radius="1.5" size="15" face-name="SimHei Regular" dx="0.1" dy="0.7"
+                            vertical-alignment="top" character-spacing="0.32" wrap-width="128">
+                <![CDATA[[capname]]]></TextSymbolizer>
         </Rule>
         <Rule>
             <filter>( [class] = "AB" )</filter>
-            <MarkersSymbolizer fill="rgb(255,0,0)" transform=" scale(10)" placement="point"/>
+            <MarkersSymbolizer fill="rgb(255,0,0)" placement="point"/>
+        </Rule>
+        <Rule>
+            <filter>( [class] = "AB" )</filter>
+            <PolygonSymbolizer file="sprites/foxgis/circle-11.svg"/>
         </Rule>
     </Style>
     <Style name="capital_label">
         <Rule>
             <filter>( [class] = "AB" ) and ( [capname] = "北京" )</filter>
-            <TextSymbolizer fill="rgb(20,20,20)" halo-fill="rgb(255,255,255)" halo-radius="1.5" size="14"
-                            face-name="Arial Unicode MS Regular" allow-overlap="true" dx="0.7" dy="0.7"
-                            vertical-alignment="top" character-spacing="0.32" wrap-width="128">
+            <TextSymbolizer max-char-angle-delta="45" fill="rgb(20,20,20)" halo-fill="rgb(255,255,255)"
+                            halo-radius="1.5" size="14" face-name="SimHei Regular" allow-overlap="true" dx="0.1"
+                            dy="0.7" vertical-alignment="top" character-spacing="0.32" wrap-width="128">
                 <![CDATA[[capname]]]></TextSymbolizer>
         </Rule>
         <Rule>
             <filter>( [class] = "AB" ) and ( [capname] = "北京" )</filter>
-            <MarkersSymbolizer fill="rgb(255,0,0)" transform=" scale(12)" placement="point"/>
+            <MarkersSymbolizer fill="rgb(255,0,0)" placement="point"/>
+        </Rule>
+        <Rule>
+            <filter>( [class] = "AB" ) and ( [capname] = "北京" )</filter>
+            <PolygonSymbolizer file="sprites/foxgis/star-15.svg"/>
         </Rule>
     </Style>
     <Style name="tianditu_live">
@@ -518,7 +539,7 @@
     <Style name="river_line">
         <Rule>
             <filter/>
-            <LineSymbolizer stroke-width="1" stroke="#87c2e4"/>
+            <LineSymbolizer spacing="250" stroke-width="1" stroke="#87c2e4"/>
         </Rule>
     </Style>
     <Style name="river_fill">
@@ -530,62 +551,62 @@
     <Style name="otherway_case">
         <Rule>
             <filter>( [rteg] != "高速" )</filter>
-            <LineSymbolizer stroke="#ca8" stroke-width="2.4"/>
+            <LineSymbolizer spacing="250" stroke="#ca8" stroke-width="2.4"/>
         </Rule>
     </Style>
     <Style name="otherway">
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="rgb(249,226,169)" stroke-width="1.6"/>
+            <LineSymbolizer spacing="250" stroke="rgb(249,226,169)" stroke-width="1.6"/>
         </Rule>
     </Style>
     <Style name="highway_road_case">
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(246,130,65)" stroke-width="5"/>
+            <LineSymbolizer spacing="250" stroke="rgb(246,130,65)" stroke-width="5"/>
         </Rule>
     </Style>
     <Style name="highway_road">
         <Rule>
             <filter>( [rteg] = "高速" )</filter>
-            <LineSymbolizer stroke="rgb(243,157,109)" stroke-width="4"/>
+            <LineSymbolizer spacing="250" stroke="rgb(243,157,109)" stroke-width="4"/>
         </Rule>
     </Style>
     <Style name="railway_case">
         <Rule>
             <filter/>
-            <LineSymbolizer stroke="#949494"/>
+            <LineSymbolizer spacing="250" stroke="#949494"/>
             <MinScaleDenominator>400000</MinScaleDenominator>
         </Rule>
         <Rule>
             <filter/>
-            <LineSymbolizer stroke-width="2.4" stroke="#949494"/>
+            <LineSymbolizer spacing="250" stroke-width="2.4" stroke="#949494"/>
             <MinScaleDenominator>200000</MinScaleDenominator>
             <MaxScaleDenominator>400000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter/>
-            <LineSymbolizer stroke-width="3" stroke="#949494"/>
+            <LineSymbolizer spacing="250" stroke-width="3" stroke="#949494"/>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
         </Rule>
         <Rule>
             <filter/>
-            <LineSymbolizer stroke-width="3" stroke="#949494"/>
+            <LineSymbolizer spacing="250" stroke-width="3" stroke="#949494"/>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
         </Rule>
     </Style>
     <Style name="railway">
         <Rule>
             <filter/>
-            <LineSymbolizer stroke-width="1.2" stroke="#fff" stroke-dasharray="10,10"/>
+            <LineSymbolizer spacing="250" stroke-width="1.2" stroke="#fff" stroke-dasharray="10,10"/>
         </Rule>
     </Style>
     <Style name="river_line_label">
         <Rule>
             <filter/>
-            <TextSymbolizer fill="rgb(12,127,241)" face-name="Arial Unicode MS Regular" size="12" allow-overlap="false"
-                            character-spacing="16"><![CDATA[[name]]]></TextSymbolizer>
+            <TextSymbolizer max-char-angle-delta="45" fill="rgb(12,127,241)" face-name="SimHei Regular" size="12"
+                            allow-overlap="false" character-spacing="16"><![CDATA[[name]]]></TextSymbolizer>
         </Rule>
         <Rule>
             <filter/>
@@ -595,7 +616,7 @@
     <Style name="river_point_label">
         <Rule>
             <filter/>
-            <TextSymbolizer fill="rgb(12,127,241)" face-name="Arial Unicode MS Regular" size="14">
+            <TextSymbolizer max-char-angle-delta="45" fill="rgb(12,127,241)" face-name="SimHei Regular" size="14">
                 <![CDATA[[name]]]></TextSymbolizer>
         </Rule>
         <Rule>
@@ -606,34 +627,42 @@
     <Style name="village_label_AK">
         <Rule>
             <filter>( [class] = "AK" )</filter>
-            <TextSymbolizer fill="#0e0d0d" halo-fill="rgb(255,255,255)" halo-radius="1.5" line-spacing="19.2" size="12"
-                            max-char-angle-delta="38" face-name="Arial Unicode MS Regular" dx="0.7" dy="0.7"
+            <TextSymbolizer max-char-angle-delta="38" fill="#0e0d0d" halo-fill="rgb(255,255,255)" halo-radius="1.5"
+                            line-spacing="19.2" size="12" face-name="SimHei Regular" dx="0" dy="0.7"
                             vertical-alignment="top" character-spacing="0.32" wrap-width="112" allow-overlap="false">
                 <![CDATA[[name]]]></TextSymbolizer>
         </Rule>
         <Rule>
             <filter>( [class] = "AK" )</filter>
-            <MarkersSymbolizer fill="#0e0d0d" transform=" scale(5)" placement="point"/>
+            <MarkersSymbolizer fill="#0e0d0d" placement="point"/>
+        </Rule>
+        <Rule>
+            <filter>( [class] = "AK" )</filter>
+            <PolygonSymbolizer file="sprites/foxgis/circle-stroked-11.svg"/>
         </Rule>
     </Style>
     <Style name="village_label">
         <Rule>
             <filter>( [class] = "BA" ) or ( [class] = "BB" ) or ( [class] = "BC" )</filter>
-            <TextSymbolizer fill="#0e0d0d" halo-fill="rgb(255,255,255)" halo-radius="1.5" line-spacing="19.2" size="8"
-                            max-char-angle-delta="38" face-name="Arial Unicode MS Regular" dx="0.7" dy="0.7"
+            <TextSymbolizer max-char-angle-delta="38" fill="#0e0d0d" halo-fill="rgb(255,255,255)" halo-radius="1.5"
+                            line-spacing="19.2" size="8" face-name="SimHei Regular" dx="0" dy="0.7"
                             vertical-alignment="top" character-spacing="0.32" wrap-width="112" allow-overlap="false">
                 <![CDATA[[name]]]></TextSymbolizer>
         </Rule>
         <Rule>
             <filter>( [class] = "BA" ) or ( [class] = "BB" ) or ( [class] = "BC" )</filter>
-            <MarkersSymbolizer fill="#0e0d0d" transform=" scale(3)" placement="point"/>
+            <MarkersSymbolizer fill="#0e0d0d" placement="point"/>
+        </Rule>
+        <Rule>
+            <filter>( [class] = "BA" ) or ( [class] = "BB" ) or ( [class] = "BC" )</filter>
+            <PolygonSymbolizer file="sprites/foxgis/circle-stroked-11.svg"/>
         </Rule>
     </Style>
     <Style name="town_label">
         <Rule>
             <filter>( [class] = "AH" ) or ( [class] = "AI" ) or ( [class] = "AJ" )</filter>
-            <TextSymbolizer fill="rgb(40,40,40)" halo-fill="rgb(255,255,255)" halo-radius="1.5" line-spacing="19.2"
-                            size="11" max-char-angle-delta="38" face-name="Arial Unicode MS Regular" dx="0.7" dy="0.7"
+            <TextSymbolizer max-char-angle-delta="38" fill="rgb(40,40,40)" halo-fill="rgb(255,255,255)"
+                            halo-radius="1.5" line-spacing="19.2" size="11" face-name="SimHei Regular" dx="0" dy="0.7"
                             vertical-alignment="top" character-spacing="0.32" wrap-width="112">
                 <![CDATA[[name]]]></TextSymbolizer>
         </Rule>
@@ -645,14 +674,18 @@
     <Style name="county_label">
         <Rule>
             <filter>( [class] = "AF" ) or ( [class] = "AE" )</filter>
-            <TextSymbolizer fill="rgb(60,60,60)" halo-fill="rgb(255,255,255)" halo-radius="1.5" line-spacing="19.2"
-                            size="13" max-char-angle-delta="38" face-name="Arial Unicode MS Regular" dx="0.7" dy="0.7"
+            <TextSymbolizer max-char-angle-delta="38" fill="rgb(60,60,60)" halo-fill="rgb(255,255,255)"
+                            halo-radius="1.5" line-spacing="19.2" size="13" face-name="SimHei Regular" dx="0" dy="0.7"
                             vertical-alignment="top" character-spacing="0.32" wrap-width="112">
                 <![CDATA[[name]]]></TextSymbolizer>
         </Rule>
         <Rule>
             <filter>( [class] = "AF" ) or ( [class] = "AE" )</filter>
-            <MarkersSymbolizer fill="rgb(0,10,10)" transform=" scale(6)" placement="point"/>
+            <MarkersSymbolizer fill="rgb(0,10,10)" placement="point"/>
+        </Rule>
+        <Rule>
+            <filter>( [class] = "AF" ) or ( [class] = "AE" )</filter>
+            <PolygonSymbolizer file="sprites/foxgis/circle-stroked-11.svg"/>
         </Rule>
     </Style>
     <Layer srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
