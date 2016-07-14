@@ -61,7 +61,7 @@ function gl2xml(globj, callback) {
     var start = font_url.indexOf('/fonts')
     var str = font_url.slice(start, font_url.length)
     var arr = str.split('/')
-    fontUri = path.join(arr[1], arr[2])
+    fontUri = path.resolve(path.join(arr[1], arr[2]))
   } else {
     fontUri = null
   }
@@ -71,7 +71,7 @@ function gl2xml(globj, callback) {
     var start2 = marker_url.indexOf('/sprites')
     var str2 = marker_url.slice(start, marker_url.length)
     var arr2 = str2.split('/')
-    markerUri = path.join(arr2[1], arr2[2],arr2[3])
+    markerUri = path.resolve(path.join(arr2[1], arr2[2],arr2[3]))
   } else {
     markerUri = null
   }
@@ -95,8 +95,8 @@ function gl2xml(globj, callback) {
       })
     }
   })
-  var xml = xmlbuilder.create(mMap)
-  callback(null, xml.end())
+  var xml = xmlbuilder.create(mMap).dec('1.0', 'UTF-8').end()
+  callback(null, xml)
 }
 
 module.exports = gl2xml
