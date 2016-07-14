@@ -10,5 +10,11 @@
   "dependencies": {
     "mapbox-gl-function": "^1.2.1",
     "xmlbuilder": "^8.2.2"
+  },
+  "devDependencies": {
+    "tilejson": "^1.0.1",
+    "tilelive": "^5.12.2",
+    "tilelive-http": "^0.11.1",
+    "tilelive-vector": "^3.9.3"
   }
 }
