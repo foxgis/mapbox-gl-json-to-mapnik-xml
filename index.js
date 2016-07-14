@@ -3,7 +3,7 @@ var xmlbuilder = require('xmlbuilder')
 var trans = require('./lib/Translate')
 var style = require('./lib/Style')
 var parameter = require('./lib/Parameters')
-
+var uti=require('./lib/uti')
 
 
 var srs_mector = "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 \
@@ -30,6 +30,9 @@ var Map = function(srs, layer) {
 
 function Style(layer, markerUri, callback) {
   style.getStyle(layer, markerUri, function(err, data) {
+    if(data.length===0){
+      callback(null, {});
+    }
     var style1 = {
       '@name': layer.id,
       'Rule': data
@@ -58,7 +61,7 @@ function gl2xml(globj, callback) {
   var fontUri, markerUri
   if (globj.glyphs) {
     var font_url = globj.glyphs
-    var start = font_url.indexOf('/fonts')
+    var start = font_url.indexOf('\/fonts')
     var str = font_url.slice(start, font_url.length)
     var arr = str.split('/')
     fontUri = path.resolve(path.join(arr[1], arr[2]))
@@ -68,7 +71,7 @@ function gl2xml(globj, callback) {
 
   if (globj.sprite) {
     var marker_url = globj.sprite
-    var start2 = marker_url.indexOf('/sprites')
+    var start2 = marker_url.indexOf('\/sprites')
     var str2 = marker_url.slice(start, marker_url.length)
     var arr2 = str2.split('/')
     markerUri = path.resolve(path.join(arr2[1], arr2[2],arr2[3]))
@@ -83,7 +86,7 @@ function gl2xml(globj, callback) {
   var mlayers = []
   mMap = Map(srs_mector, glayers)
   if (fontUri) {
-    mMap.Map['@font-directory'] =fontUri.replace(/\\/g,'/')
+    mMap.Map['@font-directory'] =fontUri.replace(/\\/g,'\/')
   }
   mMap.Map.Layer = Layer(glayers)
   mMap.Map.Style = []
@@ -91,7 +94,9 @@ function gl2xml(globj, callback) {
   glayers.forEach(function(e) {
     if (e.type !== 'background') {
       Style(e, markerUri, function(err, data) {
+        if(!uti.isEmptyObject(data)){
         mMap.Map.Style.push(data)
+        }
       })
     }
   })
