@@ -10,7 +10,7 @@ var srs_mector = "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 \
 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
 
 
-var Map = function(srs, layer) {
+var Map = function(srs, layer,markerUri) {
   var obj = {
     Map: {
       '@srs': srs || srs_mector,
@@ -19,7 +19,7 @@ var Map = function(srs, layer) {
       Layer: []
     }
   }
-  var bj = trans.bgTranslate(layer)
+  var bj = trans.bgTranslate(layer,markerUri)
   for (var p in bj) {
     obj.Map[p] = bj[p]
   }
@@ -84,7 +84,7 @@ function gl2xml(globj, callback) {
   var para = parameter.getParameters(globj)
 
   var mlayers = []
-  mMap = Map(srs_mector, glayers)
+  mMap = Map(srs_mector, glayers,markerUri)
   if (fontUri) {
     mMap.Map['@font-directory'] =fontUri.replace(/\\/g,'\/')
   }
