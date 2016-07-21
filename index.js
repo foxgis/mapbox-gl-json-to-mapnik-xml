@@ -30,6 +30,9 @@ var Map = function(srs, layer,markerUri) {
 
 function Style(layer, markerUri, callback) {
   style.getStyle(layer, markerUri, function(err, data) {
+    if(err){
+      callback(err);
+    }
     if(data.length===0){
       callback(null, {});
     }
@@ -94,6 +97,7 @@ function gl2xml(globj, callback) {
   glayers.forEach(function(e) {
     if (e.type !== 'background') {
       Style(e, markerUri, function(err, data) {
+        if(err){console.log(err);callback(err);}
         if(!uti.isEmptyObject(data)){
         mMap.Map.Style.push(data)
         }
