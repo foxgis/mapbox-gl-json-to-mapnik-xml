@@ -8,6 +8,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "color": "^0.11.3",
     "mapbox-gl-function": "^1.2.1",
     "xmlbuilder": "^8.2.2"
   },
