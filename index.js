@@ -1,7 +1,7 @@
 var path = require('path')
 var xmlbuilder = require('xmlbuilder')
 var trans = require('./lib/Translate')
-var style = require('./lib/Style')
+var style = require('./lib/style')
 var parameter = require('./lib/Parameters')
 var uti=require('./lib/uti')
 
@@ -99,7 +99,7 @@ function gl2xml(globj, callback) {
       Style(e, markerUri, function(err, data) {
         if(err){console.log(err);callback(err);}
         if(!uti.isEmptyObject(data)){
-        mMap.Map.Style.push(data)
+          mMap.Map.Style.push(data)
         }
       })
     }
