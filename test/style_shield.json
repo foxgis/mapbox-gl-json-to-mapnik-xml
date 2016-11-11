@@ -1,0 +1,1312 @@
+{
+  "updatedAt": "2016-11-10T06:17:13.376Z",
+  "createdAt": "2016-11-07T06:36:58.552Z",
+  "owner": "foxgis",
+  "name": "配图_县级",
+  "zoom": 10.15789794866197,
+  "metadata": {
+    "template": {
+      "type": "行政区划图",
+      "level": 2,
+      "des": "0代表全国，1代表省，2代表市，3代表县"
+    },
+    "replaceField": "成都市",
+    "shield": [
+      "11级省道编号",
+      "11级高速编号",
+      "11级国道编号"
+    ]
+  },
+  "sources": {
+    "ngcc_admin_v2": {
+      "type": "vector",
+      "url": "http://218.244.250.70:8090/api/v1/tilesets/foxgis/admin2"
+    }
+  },
+  "sprite": "http://218.244.250.70:8090/api/v1/sprites/foxgis/rksPUNa5/sprite",
+  "glyphs": "http://218.244.250.70:8090/api/v1/fonts/foxgis/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "背景",
+      "type": "background",
+      "paint": {
+        "background-color": "#87c2e4"
+      }
+    },
+    {
+      "id": "亚洲面",
+      "type": "fill",
+      "source": "ngcc_admin_v2",
+      "source-layer": "asia_a",
+      "paint": {
+        "fill-color": "#ebecec"
+      }
+    },
+    {
+      "id": "县界色带下",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "paint": {
+        "line-color": "#bcc7d1",
+        "line-width": 30,
+        "line-offset": -2
+      },
+      "source-layer": "boua",
+      "filter": [
+        "==",
+        "name",
+        "常山县"
+      ]
+    },
+    {
+      "id": "县界色带上",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "paint": {
+        "line-color": "#95aec7",
+        "line-width": 15,
+        "line-offset": -2
+      },
+      "source-layer": "boua",
+      "filter": [
+        "==",
+        "name",
+        "常山县"
+      ]
+    },
+    {
+      "id": "县界面",
+      "source": "ngcc_admin_v2",
+      "type": "fill",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "paint": {
+        "fill-color": "#e5eb8f"
+      },
+      "source-layer": "boua",
+      "filter": [
+        "==",
+        "name",
+        "常山县"
+      ],
+      "layout": {
+        "visibility": {
+          "stops": [
+            [
+              12,
+              "visible"
+            ],
+            [
+              13,
+              "visible"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "县界",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "paint": {
+        "line-color": "#646464",
+        "line-dasharray": [
+          10,
+          4,
+          1.5,
+          4
+        ],
+        "line-width": 2
+      },
+      "source-layer": "boua",
+      "filter": [
+        "==",
+        "name",
+        "常山县"
+      ],
+      "layout": {
+        "visibility": "visible"
+      }
+    },
+    {
+      "id": "省界",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "source-layer": "boua_prov",
+      "filter": [
+        "==",
+        "name",
+        "浙江省"
+      ],
+      "paint": {
+        "line-dasharray": [
+          12,
+          4,
+          1.5,
+          4
+        ]
+      }
+    },
+    {
+      "id": "省道2",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "paint": {
+        "line-width": 6,
+        "line-color": "#313b35"
+      },
+      "source-layer": "lrdl",
+      "filter": [
+        "all",
+        [
+          "in",
+          "gb",
+          420202,
+          420201
+        ],
+        [
+          "!in",
+          "type",
+          "高速"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      }
+    },
+    {
+      "id": "省道",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "paint": {
+        "line-width": 4,
+        "line-color": "#13b055"
+      },
+      "source-layer": "lrdl",
+      "filter": [
+        "all",
+        [
+          "in",
+          "gb",
+          420202,
+          420201
+        ],
+        [
+          "!in",
+          "type",
+          "高速"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      }
+    },
+    {
+      "id": "高速3",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "paint": {
+        "line-color": "#781432",
+        "line-opacity": 1,
+        "line-width": 9
+      },
+      "source-layer": "lrdl",
+      "filter": [
+        "==",
+        "rteg",
+        "高速"
+      ]
+    },
+    {
+      "id": "高速2",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "paint": {
+        "line-color": "#ffff00",
+        "line-opacity": 1,
+        "line-width": 5
+      },
+      "source-layer": "lrdl",
+      "filter": [
+        "==",
+        "rteg",
+        "高速"
+      ]
+    },
+    {
+      "id": "高速1",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "paint": {
+        "line-color": "#781432",
+        "line-opacity": 1,
+        "line-width": 1
+      },
+      "source-layer": "lrdl",
+      "filter": [
+        "==",
+        "rteg",
+        "高速"
+      ]
+    },
+    {
+      "id": "国道1",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": 7,
+        "line-color": "#121111"
+      },
+      "source-layer": "lrdl",
+      "filter": [
+        "all",
+        [
+          "in",
+          "gb",
+          420101,
+          420102
+        ],
+        [
+          "!=",
+          "rteg",
+          "高速"
+        ]
+      ]
+    },
+    {
+      "id": "国道2",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": 5,
+        "line-color": "#e8b27b"
+      },
+      "source-layer": "lrdl",
+      "filter": [
+        "all",
+        [
+          "in",
+          "gb",
+          420101,
+          420102
+        ],
+        [
+          "!=",
+          "rteg",
+          "高速"
+        ]
+      ]
+    },
+    {
+      "id": "铁路2",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "source-layer": "clrrl",
+      "filter": [
+        "any",
+        [
+          "in",
+          "gb",
+          410101,
+          410102,
+          410103
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      }
+    },
+    {
+      "id": "铁路1",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "paint": {
+        "line-width": 6,
+        "line-color": "#807a80",
+        "line-offset": 20
+      },
+      "source-layer": "lrrl",
+      "filter": [
+        "in",
+        "gb",
+        410101,
+        410102,
+        410103
+      ]
+    },
+    {
+      "id": "铁路1复制",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "paint": {
+        "line-width": 4,
+        "line-color": "#f7f5f7",
+        "line-dasharray": [
+          5,
+          4,
+          5,
+          4
+        ],
+        "line-offset": 20
+      },
+      "source-layer": "lrrl",
+      "filter": [
+        "in",
+        "gb",
+        410101,
+        410102,
+        410103
+      ]
+    },
+    {
+      "id": "县道",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#d637de",
+        "line-width": 3
+      },
+      "source-layer": "lrdl",
+      "filter": [
+        "all",
+        [
+          "in",
+          "gb",
+          420301,
+          420302
+        ],
+        [
+          "!in",
+          "gb",
+          420201,
+          420101
+        ],
+        [
+          "!=",
+          "type",
+          "高速"
+        ]
+      ]
+    },
+    {
+      "id": "线状水系",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "source-layer": "hydl",
+      "paint": {
+        "line-color": "#78cbff"
+      }
+    },
+    {
+      "id": "水库",
+      "source": "ngcc_admin_v2",
+      "type": "fill",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "paint": {
+        "fill-color": "#a8e0f0",
+        "fill-opacity": 1,
+        "fill-outline-color": "#6767a6"
+      },
+      "source-layer": "hyda"
+    },
+    {
+      "id": "11级线状水",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "paint": {
+        "line-color": "#9bcbde"
+      },
+      "source-layer": "chydl"
+    },
+    {
+      "id": "11级面状水",
+      "source": "ngcc_admin_v2",
+      "type": "fill",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "paint": {
+        "fill-color": "#afdaf0",
+        "fill-translate": [
+          1,
+          1
+        ],
+        "fill-outline-color": "#c3c3e3",
+        "fill-opacity": 1
+      },
+      "source-layer": "chyda"
+    },
+    {
+      "id": "高速注记",
+      "source": "ngcc_admin_v2",
+      "type": "symbol",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "text-field": "{rn}",
+        "text-font": [
+          "SimHei Regular"
+        ],
+        "symbol-placement": "line",
+        "visibility": "visible",
+        "icon-image": "motorway_3",
+        "text-offset": [
+          0,
+          0.15
+        ]
+      },
+      "source-layer": "lrdl_label",
+      "filter": [
+        "==",
+        "rteg",
+        "高速"
+      ],
+      "paint": {
+        "text-color": "#696108"
+      }
+    },
+    {
+      "id": "国道编号",
+      "source": "ngcc_admin_v2",
+      "type": "symbol",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "text-field": "{rn}",
+        "text-font": [
+          "SimHei Regular"
+        ],
+        "visibility": "visible",
+        "symbol-placement": "line",
+        "symbol-avoid-edges": false,
+        "icon-allow-overlap": false,
+        "icon-image": "motorway_3",
+        "text-size": 14,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "icon-size": 1
+      },
+      "source-layer": "lrdl_label",
+      "filter": [
+        "all",
+        [
+          "==",
+          "gb",
+          420101
+        ],
+        [
+          "!=",
+          "rteg",
+          "高速"
+        ],
+        [
+          "!=",
+          "gb",
+          420301
+        ]
+      ],
+      "paint": {
+        "icon-color": "#ed1541",
+        "text-color": "#f51441"
+      }
+    },
+    {
+      "id": "省道编号",
+      "source": "ngcc_admin_v2",
+      "type": "symbol",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "text-field": "{rn}",
+        "text-font": [
+          "SimHei Regular"
+        ],
+        "symbol-placement": "line",
+        "icon-image": "motorway_3",
+        "icon-size": 1.2,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "symbol-avoid-edges": false,
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "source-layer": "lrdl_label",
+      "filter": [
+        "all",
+        [
+          "==",
+          "gb",
+          420201
+        ],
+        [
+          "!=",
+          "rteg",
+          "高速"
+        ],
+        [
+          "!=",
+          "gb",
+          420101
+        ]
+      ],
+      "paint": {
+        "text-color": "#0aa33d"
+      }
+    },
+    {
+      "id": "县道编号",
+      "source": "ngcc_admin_v2",
+      "type": "symbol",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "text-field": "{rn}",
+        "text-font": [
+          "SimHei Regular"
+        ],
+        "text-allow-overlap": false,
+        "text-ignore-placement": false,
+        "symbol-spacing": 100,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "line",
+        "icon-image": "motorway_3",
+        "text-offset": [
+          0,
+          0.15
+        ],
+        "icon-size": 0.8,
+        "text-size": 10
+      },
+      "source-layer": "lrdl_label",
+      "filter": [
+        "==",
+        "gb",
+        420301
+      ]
+    },
+    {
+      "id": "11级省道复制",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#313b35",
+        "line-width": 6
+      },
+      "source-layer": "clrdl",
+      "filter": [
+        "in",
+        "gb",
+        420201
+      ]
+    },
+    {
+      "id": "11级乡道",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "paint": {
+        "line-width": 2,
+        "line-color": "#c78304"
+      },
+      "source-layer": "clrdl",
+      "filter": [
+        "any",
+        [
+          "==",
+          "gb",
+          420400
+        ]
+      ]
+    },
+    {
+      "id": "11级县道",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "paint": {
+        "line-width": 3,
+        "line-color": "#bf0fbf"
+      },
+      "source-layer": "clrdl",
+      "filter": [
+        "any",
+        [
+          "in",
+          "gb",
+          420301
+        ]
+      ]
+    },
+    {
+      "id": "11级省道",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "paint": {
+        "line-color": "#13b055",
+        "line-width": 4
+      },
+      "source-layer": "clrdl",
+      "filter": [
+        "in",
+        "gb",
+        420201
+      ]
+    },
+    {
+      "id": "11级国道1",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": 7,
+        "line-color": "#121111"
+      },
+      "source-layer": "clrdl",
+      "filter": [
+        "all",
+        [
+          "in",
+          "gb",
+          420102,
+          420101
+        ],
+        [
+          "!=",
+          "rteg",
+          "高速"
+        ]
+      ]
+    },
+    {
+      "id": "11级国道2",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": 5,
+        "line-color": "#e8b27b"
+      },
+      "source-layer": "clrdl",
+      "filter": [
+        "all",
+        [
+          "in",
+          "gb",
+          420102,
+          420101
+        ],
+        [
+          "!=",
+          "rteg",
+          "高速"
+        ]
+      ]
+    },
+    {
+      "id": "11级高速3",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#9e0d61",
+        "line-width": 9
+      },
+      "source-layer": "clrdl",
+      "filter": [
+        "==",
+        "rteg",
+        "高速"
+      ]
+    },
+    {
+      "id": "11级高速2",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#ffff00",
+        "line-width": 5
+      },
+      "source-layer": "clrdl",
+      "filter": [
+        "==",
+        "rteg",
+        "高速"
+      ]
+    },
+    {
+      "id": "11级高速",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#9e0d61"
+      },
+      "source-layer": "clrdl",
+      "filter": [
+        "==",
+        "rteg",
+        "高速"
+      ]
+    },
+    {
+      "id": "其他道路",
+      "source": "ngcc_admin_v2",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": 2,
+        "line-color": "#c78304"
+      },
+      "source-layer": "clrdl",
+      "filter": [
+        "all",
+        [
+          "!in",
+          "gb",
+          420101,
+          420201,
+          420301,
+          420400
+        ],
+        [
+          "!=",
+          "rteg",
+          "高速"
+        ]
+      ]
+    },
+    {
+      "id": "11级高速编号",
+      "source": "ngcc_admin_v2",
+      "type": "symbol",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "text-field": "{rn}",
+        "text-font": [
+          "SimHei Regular"
+        ],
+        "visibility": "visible",
+        "symbol-placement": "line",
+        "icon-image": "motorway_3",
+        "text-offset": [
+          0,
+          0.15
+        ]
+      },
+      "source-layer": "clrdl",
+      "filter": [
+        "==",
+        "rteg",
+        "高速"
+      ],
+      "paint": {
+        "text-color": "#696108"
+      }
+    },
+    {
+      "id": "11级国道编号",
+      "source": "ngcc_admin_v2",
+      "type": "symbol",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "text-field": "{rn}",
+        "text-font": [
+          "SimHei Regular"
+        ],
+        "symbol-spacing": 300,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "line",
+        "icon-image": "motorway_3",
+        "icon-size": 1.1,
+        "text-offset": [
+          0,
+          0.15
+        ],
+        "text-ignore-placement": false,
+        "icon-allow-overlap": false,
+        "icon-ignore-placement": false
+      },
+      "source-layer": "clrdl",
+      "filter": [
+        "all",
+        [
+          "!=",
+          "rteg",
+          "高速"
+        ],
+        [
+          "in",
+          "gb",
+          420101
+        ],
+        [
+          "!in",
+          "gb",
+          420201
+        ]
+      ]
+    },
+    {
+      "id": "11级省道编号",
+      "source": "ngcc_admin_v2",
+      "type": "symbol",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "text-field": "{rn}",
+        "text-font": [
+          "SimHei Regular"
+        ],
+        "symbol-placement": "line",
+        "symbol-spacing": 150,
+        "icon-image": "motorway_3",
+        "icon-allow-overlap": false,
+        "icon-ignore-placement": false,
+        "symbol-avoid-edges": false,
+        "visibility": "visible",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false,
+        "text-offset": [
+          0,
+          0.15
+        ]
+      },
+      "source-layer": "clrdl",
+      "filter": [
+        "all",
+        [
+          "!=",
+          "rteg",
+          "高速"
+        ],
+        [
+          "!=",
+          "gb",
+          420101
+        ],
+        [
+          "in",
+          "gb",
+          420201
+        ]
+      ]
+    },
+    {
+      "id": "乡镇-注记",
+      "source": "ngcc_admin_v2",
+      "type": "symbol",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "SimHei Regular"
+        ],
+        "text-size": 14,
+        "visibility": "none",
+        "text-allow-overlap": false,
+        "text-ignore-placement": true
+      },
+      "source-layer": "agnp",
+      "filter": [
+        "any",
+        [
+          "==",
+          "xianid",
+          "330822"
+        ],
+        [
+          "in",
+          "class",
+          "AI",
+          "AJ"
+        ]
+      ]
+    },
+    {
+      "id": "乡镇符号",
+      "source": "ngcc_admin_v2",
+      "type": "symbol",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "SimHei Regular"
+        ],
+        "icon-image": "circle-stroked-15",
+        "visibility": "visible",
+        "text-offset": [
+          2,
+          0
+        ],
+        "icon-size": 0.8,
+        "text-allow-overlap": false,
+        "text-ignore-placement": true
+      },
+      "source-layer": "agnp",
+      "paint": {
+        "icon-color": "#0d0c0d"
+      },
+      "filter": [
+        "any",
+        [
+          "in",
+          "class",
+          "AJ",
+          "AI"
+        ]
+      ]
+    },
+    {
+      "id": "村屯注记",
+      "source": "ngcc_admin_v2",
+      "type": "symbol",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "SimHei Regular"
+        ],
+        "text-size": 10
+      },
+      "paint": {
+        "text-color": "#363336"
+      },
+      "source-layer": "agnp",
+      "filter": [
+        "any",
+        [
+          "==",
+          "xianid",
+          "330822"
+        ],
+        [
+          "in",
+          "class",
+          "AK",
+          "AH"
+        ]
+      ]
+    },
+    {
+      "id": "村屯符号",
+      "source": "ngcc_admin_v2",
+      "type": "symbol",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "SimHei Regular"
+        ],
+        "icon-image": "circle-15",
+        "icon-size": 0.6,
+        "text-size": 12,
+        "text-offset": [
+          2,
+          0
+        ],
+        "text-ignore-placement": false,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "#595359"
+      },
+      "source-layer": "agnp",
+      "filter": [
+        "any",
+        [
+          "==",
+          "xianid",
+          "330822"
+        ],
+        [
+          "==",
+          "class",
+          "AK"
+        ]
+      ]
+    },
+    {
+      "id": "水系注记",
+      "source": "ngcc_admin_v2",
+      "type": "symbol",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "SimHei Regular"
+        ],
+        "symbol-placement": "line",
+        "symbol-spacing": 80,
+        "text-allow-overlap": false,
+        "text-ignore-placement": true,
+        "symbol-avoid-edges": true,
+        "text-size": 12
+      },
+      "source-layer": "hyda_label",
+      "paint": {
+        "text-color": "#5c8dbd"
+      }
+    },
+    {
+      "id": "县级注记及符号",
+      "source": "ngcc_admin_v2",
+      "type": "symbol",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "SimHei Regular"
+        ],
+        "icon-image": "circle-stroked-15",
+        "text-offset": [
+          -2,
+          0
+        ],
+        "icon-offset": [
+          2,
+          0
+        ],
+        "text-ignore-placement": true,
+        "text-allow-overlap": false,
+        "text-size": 20,
+        "icon-size": 1
+      },
+      "paint": {
+        "icon-halo-color": "#0d010d",
+        "icon-halo-width": 1
+      },
+      "source-layer": "agnp",
+      "filter": [
+        "any",
+        [
+          "==",
+          "class",
+          "AF"
+        ]
+      ]
+    },
+    {
+      "id": "11级乡镇注记及符号",
+      "source": "ngcc_admin_v2",
+      "type": "symbol",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "SimHei Regular"
+        ],
+        "icon-image": "circle-stroked-11",
+        "text-offset": [
+          2,
+          0
+        ],
+        "icon-size": 0.8
+      },
+      "source-layer": "cagnp",
+      "filter": [
+        "any",
+        [
+          "==",
+          "class",
+          "AJ"
+        ]
+      ],
+      "paint": {
+        "text-color": "#171717"
+      }
+    },
+    {
+      "id": "11级村屯注记及符号",
+      "source": "ngcc_admin_v2",
+      "type": "symbol",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "SimHei Regular"
+        ],
+        "visibility": "visible",
+        "text-size": 12,
+        "text-ignore-placement": false,
+        "text-allow-overlap": false,
+        "icon-image": "circle-11",
+        "text-offset": [
+          2,
+          0
+        ],
+        "text-anchor": "center"
+      },
+      "paint": {
+        "text-color": "#545454",
+        "icon-color": "#a8a8a8",
+        "icon-opacity": 0.5
+      },
+      "source-layer": "cagnp",
+      "filter": [
+        "any",
+        [
+          "==",
+          "class",
+          "AK"
+        ]
+      ]
+    },
+    {
+      "id": "11级县级注记及符号",
+      "source": "ngcc_admin_v2",
+      "type": "symbol",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "SimHei Regular"
+        ],
+        "icon-image": "circle-stroked-15",
+        "text-offset": [
+          2.2,
+          0
+        ],
+        "text-size": 20,
+        "icon-size": 1
+      },
+      "source-layer": "cagnp",
+      "filter": [
+        "==",
+        "class",
+        "AF"
+      ]
+    },
+    {
+      "id": "11级水系注记",
+      "source": "ngcc_admin_v2",
+      "type": "symbol",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "SimHei Regular"
+        ]
+      },
+      "source-layer": "chyda",
+      "filter": [
+        "any",
+        [
+          "in",
+          "gb",
+          210100
+        ]
+      ]
+    }
+  ],
+  "transition": {
+    "delay": 0,
+    "duration": 300
+  },
+  "pitch": 0,
+  "bearing": 0,
+  "center": [
+    118.54187237794906,
+    28.99675742233299
+  ],
+  "version": 8,
+  "tags": [],
+  "scope": "private",
+  "style_id": "B1mf-j6le"
+}

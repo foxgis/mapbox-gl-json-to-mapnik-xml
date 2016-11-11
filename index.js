@@ -83,6 +83,8 @@ function gl2xml(globj, callback) {
     markerUri = null
   }
 
+  var shield_array=globj.metadata?globj.metadata.shield:[];
+
   var mMap = {}
   var glayers = globj.layers
   var para = parameter.getParameters(globj)
@@ -96,6 +98,9 @@ function gl2xml(globj, callback) {
   mMap.Map.Parameters = para.Parameters
   glayers.forEach(function(e) {
     if (e.type !== 'background'&&source_obj[e.source].type!=='video') {
+      if(uti.contains(shield_array,e.id)){
+        e.shield=true;
+      }
       Style(e, markerUri, function(err, data) {
         if(err){console.log(err);callback(err);}
         if(!uti.isEmptyObject(data)){
