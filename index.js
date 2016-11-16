@@ -83,7 +83,7 @@ function gl2xml(globj, callback) {
     markerUri = null
   }
 
-  var shield_array=globj.metadata?globj.metadata.shield:[];
+  var shield_array=(globj.metadata&&globj.metadata.shield)?globj.metadata.shield:[];
 
   var mMap = {}
   var glayers = globj.layers

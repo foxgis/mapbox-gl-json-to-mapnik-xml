@@ -1,6 +1,6 @@
 {
   "name": "mapbox-gl-json-to-mapnik-xml",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Convert mapbox gl json to mapnik xml",
   "main": "index.js",
   "scripts": {
@@ -17,5 +17,17 @@
     "tilelive": "^5.12.2",
     "tilelive-http": "^0.11.1",
     "tilelive-vector": "^3.9.3"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FoxGIS/mapbox-gl-json-to-mapnik-xml.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/FoxGIS/mapbox-gl-json-to-mapnik-xml/issues"
+  },
+  "homepage": "https://github.com/FoxGIS/mapbox-gl-json-to-mapnik-xml#readme"
 }
