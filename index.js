@@ -109,7 +109,7 @@ function gl2xml(globj, callback) {
       })
     }
   })
-  var xml = xmlbuilder.create(mMap).dec('1.0', 'UTF-8').end()
+  var xml = xmlbuilder.create(mMap).dec('1.0', 'UTF-8').end().replace(/&amp;/g,'&');
   callback(null, xml)
 }
 

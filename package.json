@@ -1,6 +1,6 @@
 {
   "name": "mapbox-gl-json-to-mapnik-xml",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "Convert mapbox gl json to mapnik xml",
   "main": "index.js",
   "scripts": {
