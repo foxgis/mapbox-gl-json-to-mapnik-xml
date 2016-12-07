@@ -84,6 +84,7 @@ function gl2xml(globj, callback) {
   }
 
   var shield_array=(globj.metadata&&globj.metadata.shield)?globj.metadata.shield:[];
+  var autolabel_array=(globj.metadata&&globj.metadata.autolabel)?globj.metadata.autolabel:[];
 
   var mMap = {}
   var glayers = globj.layers
@@ -100,6 +101,9 @@ function gl2xml(globj, callback) {
     if (e.type !== 'background'&&source_obj[e.source].type!=='video') {
       if(uti.contains(shield_array,e.id)){
         e.shield=true;
+      }
+      if(uti.contains(autolabel_array,e.id)){
+        e.autolabel=true;
       }
       Style(e, markerUri, function(err, data) {
         if(err){console.log(err);callback(err);}
